@@ -1,8 +1,8 @@
 # Lights Out
 
 <p align="center">
-  <img src="images/launcher.png" width="45%" />
-  <img src="images/gameplay.png" width="45%" />
+  <img src="images/launch_window.png" width="45%" />
+  <img src="images/sample_game_grid.png" width="45%" />
 </p>
 
 An interactive Python implementation of the classic *Lights Out* puzzle, extended with multiple algebraic state spaces and nontrivial topological grids.
