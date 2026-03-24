@@ -14,7 +14,7 @@ An interactive Python implementation of the classic *Lights Out* puzzle, extende
 This project implements a fully playable version of *Lights Out* with several enhancements:
 
 - Variable grid sizes from 2×2 up to 15×15
-- Multiple state spaces over \( \mathbb{Z}_p \) for \( p \in \{2,3,5,7\} \)
+- Multiple state spaces over Z_p for p in {2,3,5,7}
 - Support for nontrivial topologies:
   - Simple grid
   - Cylinder
@@ -31,19 +31,17 @@ Each game is initialized in a way that guarantees it is solvable.
 
 ## How It Works
 
-Each board configuration is modeled as a vector over \( \mathbb{Z}_p \), and button presses correspond to adding columns of an adjacency matrix \( A \).
+Each board configuration is modeled as a vector over Z_p, and button presses correspond to adding columns of an adjacency matrix A.
 
-To solve the puzzle, we seek a press vector \( x \) that sends the current board state \( b \) back to the zero state. This means solving the linear system
+To solve the puzzle, we seek a press vector x  that sends the current board state b back to the zero state. This means solving the linear system
 
-\[
-A x \equiv -b \pmod{p}
-\]
+A x ≡ -b (mod p)
 
 where:
-- \( b \) is the current board state
-- \( x \) is the vector of button presses
+-  b  is the current board state
+-  x  is the solution vector of button presses
 
-A reduced form of the adjacency matrix is computed along with a solver matrix \( A^+ \), allowing solutions to be generated efficiently during gameplay.
+A reduced form of the adjacency matrix is computed along with a solver matrix A⁺, allowing solutions to be generated efficiently during gameplay.
 
 If the system has nontrivial nullity, multiple solutions may exist; the program returns one valid solution.
 
@@ -77,3 +75,23 @@ Install dependencies with:
 
 ```bash
 pip install numpy pillow
+```
+
+---
+
+## Running the Program
+
+From the project directory:
+
+    python Lights_Out.py
+
+## Notes
+
+-   The appearance of the application icon may vary depending on the
+    operating system and desktop environment.
+-   Image paths are resolved relative to the script location for
+    portability.
+
+
+
+
